@@ -28,14 +28,28 @@ button {
 }
 
 .container {
-    max-width: 335px;
+    max-width: 375px;
     padding-right: 20px;
-    padding-left: 20px;
+    padding-left: 20px; 
     margin-right: auto;
     margin-left: auto;
+} 
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
-@media screen and (min-width: 768px) {
+ @media screen and (min-width: 768px) {
     .container {
         max-width: 704px;
     }
@@ -45,7 +59,7 @@ button {
     .container {
         max-width: 1080px;
     }
-}
+} 
 
 /* ============ HEADER STYLES ============ */
 
@@ -54,6 +68,7 @@ button {
         padding-top: 20px;
         padding-bottom: 48px;
         display: flex;
+        
 }
 
 .header-navigation {
@@ -325,4 +340,434 @@ button {
      display: none;
  }
 
+ 
+ 
 }
+
+
+/* ================ HERO STYLES ================ */
+
+
+.hero.section {
+    padding: 0;
+}
+
+.hero-container {
+    padding: 0 20px;
+        background: #576f35;
+        background-image: linear-gradient(to bottom,
+                #576f35 0,
+                #576f35 calc(100% - 370px),
+                rgba(20, 20, 20, 0.2) calc(100% - 370px),
+                rgba(20, 20, 20, 0.2) 100%),
+            url(/images/hero/hero-mob-1x.jpg);
+        max-width: 375px;
+        height: 712px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: bottom;
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .hero .container {
+        background-image: linear-gradient(to bottom,
+                #576f35 0,
+                #576f35 calc(100% - 370px),
+                rgba(20, 20, 20, 0.2) calc(100% - 370px),
+                rgba(20, 20, 20, 0.2) 100%),
+            url(/images/hero/hero-mob-2x.jpg);
+    }
+}
+
+@media screen and (max-width: 374px) {
+    @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero-container {
+            background-image: linear-gradient(to bottom,
+                    #576f35 0,
+                    #576f35 calc(100% - 370px),
+                    rgba(20, 20, 20, 0.2) calc(100% - 370px),
+                    rgba(20, 20, 20, 0.2) 100%),
+                url(/images/hero/hero-mob-2x.jpg);
+            background-size: auto;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .hero-container {
+        margin: 0 auto;
+         max-width: 768px;
+        height: 902px;
+        background-image: linear-gradient(to bottom,
+                #576f35 0,
+                #576f35 calc(100% - 539px),
+                rgba(20, 20, 20, 0.2) calc(100% - 539px),
+                rgba(20, 20, 20, 0.2) 100%),
+            url(/images/hero/hero-tab-1x.jpg);
+    }
+}
+
+ @media screen and (min-device-pixel-ratio: 2),
+ (min-resolution: 192dpi),
+ (min-resolution: 2dppx) {
+    .hero-container {
+         background-image: linear-gradient(to bottom,
+                 #576f35 0,
+                 #576f35 calc(100% - 539px),
+                 rgba(20, 20, 20, 0.2) calc(100% - 539px),
+                 rgba(20, 20, 20, 0.2) 100%),
+             url(/images/hero/hero-tab-2x.jpg);
+     }
+ }
+ 
+
+ @media screen and (min-width: 1280px) {
+    .hero-container {
+         padding: 0 100px;
+         max-width: 1280px;
+         height: 800px;
+         background-image: linear-gradient(to right,
+                 #576f35 0,
+                 #576f35 calc(100% - 650px),
+                 rgba(20, 20, 20, 0.2) calc(100% - 650px),
+                 rgba(20, 20, 20, 0.2) 100%),
+             url(/images/hero/hero-desk-1x.jpg);
+         background-position: right;
+     }
+
+     @media screen and (min-device-pixel-ratio: 2),
+     (min-resolution: 192dpi),
+     (min-resolution: 2dppx) {
+        .hero-container {
+             background-image: linear-gradient(to right,
+                     #576f35 0,
+                     #576f35 calc(100% - 650px),
+                     rgba(20, 20, 20, 0.2) calc(100% - 650px),
+                     rgba(20, 20, 20, 0.2) 100%),
+                 url(/images/hero/hero-desk-2x.jpg);
+         }
+     }
+ }
+
+
+ .hero-title {
+     color: #fbfbfb;
+     text-align: left;
+     font-size: 48px;
+     font-weight: 600;
+     line-height: 1;
+     letter-spacing: -0.015em;
+     text-transform: uppercase;
+     margin-bottom: 20px;
+ }
+
+ @media screen and (min-width: 768px) {
+     .hero-title {
+         font-size: 76px;
+         margin-bottom: 25px;
+     }
+ }
+
+ @media screen and (min-width: 1280px) {
+     .hero-title {
+         width: 502px;
+         padding-top: 238px;
+         margin-bottom: 128px;
+         text-align: left;
+     }
+ }
+
+ .hero-text {
+     color: #fbfbfb;
+     font-size: 14px;
+     font-weight: 500;
+     line-height: 1.29;
+     text-align: left;
+ }
+
+ @media screen and (min-width: 768px) {
+     .hero-text {
+         font-size: 16px;
+         line-height: 1.25;
+         width: 603px;
+     }
+ }
+
+ @media screen and (min-width: 1280px) {
+     .hero-text {
+         width: 472px;
+         letter-spacing: 0.02em;
+     }
+ }
+
+
+ /* ============ HOW IT WORKS STYLES ============ */
+
+ .section.work-section {
+     margin: 0;
+     padding: 0;
+ }
+
+ .container.work-wrapper {
+     padding: 0;
+ }
+
+ @media screen and (min-width: 1280px) {
+     .container.work-wrapper {
+         display: flex;
+         padding: 0;
+     }
+ }
+
+ .container-pic {
+     background-color: #7a3145;
+     padding: 40px 20px;
+ }
+
+ @media screen and (min-width: 768px) {
+     .container-pic {
+         padding: 100px 64px;
+     }
+ }
+
+ @media screen and (min-width: 1280px) {
+     .container-pic {
+         padding: 100px 100px;
+     }
+ }
+
+ .image {
+     border-radius: 30px;
+     width: 100%;
+ }
+
+ .container-list {
+     padding: 80px 20px;
+     background-color: #576f35;
+ }
+
+ @media screen and (min-width: 768px) {
+     .container-list {
+         padding: 100px 159px;
+     }
+ }
+
+ @media screen and (min-width: 1280px) {
+     .container-list {
+         padding: 100px 100px;
+     }
+ }
+
+ @media screen and (min-width: 768px) {
+     .list-box {
+         width: 450px;
+     }
+ }
+
+ .list-title {
+     font-size: 28px;
+     font-weight: 600;
+     line-height: 1;
+     letter-spacing: -0.01em;
+     text-transform: uppercase;
+     color: #fbfbfb;
+ }
+
+ @media screen and (max-width: 767px) {
+     .list-title {
+         margin-bottom: 20px;
+     }
+ }
+
+ @media screen and (min-width: 768px) {
+     .list-title {
+         margin-bottom: 25px;
+         font-size: 32px;
+     }
+ }
+
+ .title-accent {
+     color: rgba(251, 251, 251, 0.3);
+ }
+
+ .text-title {
+     font-size: 14px;
+     line-height: 1.29;
+     font-weight: 500;
+     color: #fbfbfb;
+ }
+
+ @media screen and (max-width: 767px) {
+     .text-title {
+         margin-bottom: 40px;
+     }
+ }
+
+ @media screen and (min-width: 768px) {
+     .text-title {
+         margin-bottom: 50px;
+         font-size: 16px;
+         line-height: 1.25;
+     }
+ }
+
+ .numeric-list {
+     list-style: none;
+     margin: 0;
+     padding: 0;
+     counter-reset: my-counter;
+ }
+
+ .numeric-item {
+     display: flex;
+     align-items: center;
+     gap: 20px;
+     padding: 12px 24px;
+     border-radius: 15px;
+     background-color: #fbfbfb;
+     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+     margin-bottom: 20px;
+ }
+
+ .numeric-item:last-child {
+     margin-bottom: 0px;
+ }
+
+ @media screen and (min-width: 768px) {
+     .numeric-item {
+         padding: 12px 25px 12px 24px;
+     }
+ }
+
+ @media screen and (min-width: 1280px) {
+     .numeric-item {
+         padding: 12px 27px 12px 24px;
+     }
+ }
+
+ .numeric-text {
+     font-size: 12px;
+     letter-spacing: -0.02em;
+     line-height: 1.17;
+     color: rgba(20, 20, 20, 0.6);
+ }
+
+ @media screen and (min-width: 768px) {
+     .numeric-text {
+         font-size: 16px;
+         line-height: 1.25;
+     }
+ }
+
+ .numeric-accent {
+     font-weight: 700;
+     color: #141414;
+ }
+
+ .numbers {
+     color: #fbfbfb;
+     font-size: 20px;
+     font-style: normal;
+     font-weight: 600;
+     line-height: 1;
+     letter-spacing: -0.4px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-shrink: 0;
+     width: 42px;
+     height: 42px;
+     background-color: #7a3145;
+     border: 5px solid rgba(122, 49, 69, 0.3);
+     border-radius: 50%;
+     background-clip: content-box;
+     counter-increment: my-counter;
+ }
+
+ .numbers::before {
+     content: counter(my-counter);
+ }
+
+
+/* ============ PROMO SECTION STYLES ============ */
+ .promo.section {
+     
+     padding: 0;
+ }
+
+ .promo .container {
+    padding: 80px 10px;
+     background: #fbfbfb;
+
+
+ }
+
+ .promo-text-fill {
+    display: block;
+        padding: 3px 10px;
+        color: #fbfbfb;
+        font-size: 48px;
+        font-weight: 600;
+        line-height: 1.04;
+        letter-spacing: -0.015em;
+        text-transform: uppercase;
+        border-radius: 12px;
+        background-color: #576f35;
+ }
+
+ .promo-text {
+     display: block;
+     padding: 0 10px;
+     color: #141414;
+     font-size: 48px;
+     font-weight: 600;
+     line-height: 1.04;
+     letter-spacing: -0.015em;
+     text-transform: uppercase;
+ }
+
+ @media screen and (min-width: 768px) {
+    
+     .promo .container {
+         padding: 100px 16px;
+     }
+
+     .promo-text-fill {
+         padding: 8px 16px;
+         font-size: 64px;
+         line-height: 1.09;
+     }
+
+     .promo-text {
+         padding: 0 16px;
+         font-size: 64px;
+         line-height: 1.09;
+     }
+ }
+
+ @media screen and (min-width: 1280px) {
+    
+
+     .promo .container {
+         padding: 100px;
+     }
+
+     .promo-text-fill {
+         display: inline-block;
+         padding: 0 13px;
+         font-size: 76px;
+         line-height: 1.05;
+     }
+
+     .promo-text {
+         display: inline-block;
+         display: inline;
+         padding: 0 13px;
+         font-size: 76px;
+         line-height: 1.05;
+     }
+ }
