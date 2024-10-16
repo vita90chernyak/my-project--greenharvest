@@ -86,7 +86,7 @@ img {
 
 /* ============ HEADER STYLES ============ */
 
-.page-header-container {
+.header .container {
     background-color: #576f35;
         padding-top: 20px;
         padding-bottom: 48px;
@@ -311,6 +311,17 @@ img {
 
 
 @media screen and (min-width: 1280px) {
+    .header .container {
+            position: absolute;
+            width: 100%;
+            top: 32px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 999;
+            background-color: transparent;
+            padding: 0 100px;
+        }
+    
 .header-navigation {
         margin-right: 20px;
     }
@@ -375,7 +386,7 @@ img {
     padding: 0;
 }
 
-.hero-container {
+.hero .container {
     padding: 0 20px;
         background: #576f35;
         background-image: linear-gradient(to bottom,
@@ -408,7 +419,7 @@ img {
     @media screen and (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-        .hero-container {
+        .hero .container {
             background-image: linear-gradient(to bottom,
                     #576f35 0,
                     #576f35 calc(100% - 370px),
@@ -421,7 +432,7 @@ img {
 }
 
 @media screen and (min-width: 768px) {
-    .hero-container {
+    .hero .container {
         margin: 0 auto;
          max-width: 768px;
         height: 902px;
@@ -437,7 +448,7 @@ img {
  @media screen and (min-device-pixel-ratio: 2),
  (min-resolution: 192dpi),
  (min-resolution: 2dppx) {
-    .hero-container {
+    .hero .container {
          background-image: linear-gradient(to bottom,
                  #576f35 0,
                  #576f35 calc(100% - 539px),
@@ -449,7 +460,7 @@ img {
  
 
  @media screen and (min-width: 1280px) {
-    .hero-container {
+    .hero .container {
          padding: 0 100px;
          max-width: 1280px;
          height: 800px;
@@ -465,7 +476,7 @@ img {
      @media screen and (min-device-pixel-ratio: 2),
      (min-resolution: 192dpi),
      (min-resolution: 2dppx) {
-        .hero-container {
+        .hero .container {
              background-image: linear-gradient(to right,
                      #576f35 0,
                      #576f35 calc(100% - 650px),
@@ -1067,7 +1078,7 @@ img {
 /* ============ ORDER SECTION STYLES ============ */
 
 .your-order-image {
-    border-radius: 15px;
+    border-radius: 30px;
     width: 100%;
 }
 
